@@ -1,0 +1,590 @@
+/* Filter controls */
+.filter-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: flex-end;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.filter-input, .filter-select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filter-group .filter-input {
+  -webkit-appearance: none;  /* Remove the default styling in WebKit browsers (e.g., Chrome, Safari) */
+  -moz-appearance: none;     /* Remove the default styling in Firefox */
+  appearance: none;          /* General syntax */
+  font-size: 15px;
+  color: #333;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.filter-btn {
+  padding: 8px 15px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-btn:hover {
+  background: #45a049;
+}
+
+/* View button */
+.view-btn {
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.view-btn:hover {
+  background: #0b7dda;
+}
+
+/* Stock dialog */
+.stock-dialog {
+  max-width: 600px;
+}
+
+.stock-details {
+  padding: 10px;
+}
+
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.stock-item {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stock-item h5 {
+  margin-top: 0;
+  color: #555;
+}
+
+.stock-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2196F3;
+}
+
+  /* Checkbox styling for DataTable */
+.react-data-table-component {
+    /* Ensure checkboxes align properly with other cells */
+    td:first-child, th:first-child {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+  }
+  
+  /* Custom checkbox styling */
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Checkbox hover state */
+  input[type="checkbox"]:hover {
+    border-color: #3498db;
+    background-color: #f8f9fa;
+  }
+  
+  /* Checkbox checked state */
+  input[type="checkbox"]:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+  }
+  
+  /* Checkmark - hidden when not checked */
+  input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show checkmark when checked */
+  input[type="checkbox"]:checked::before {
+    display: block;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Focus state */
+  input[type="checkbox"]:focus {
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  /* Disabled state */
+  input[type="checkbox"]:disabled {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    cursor: not-allowed;
+  }
+  
+  /* Alignment for the select column header */
+  .rdt_TableHead .rdt_TableCol:first-child {
+    text-align: center !important;
+  }
+  
+  /* Cell alignment for checkboxes */
+  .rdt_TableCell:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* DFAllocation.css */
+
+.data-table-container {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 20px;
+    background: #f8f9fa;
+    padding: 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .action-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 180px;
+    justify-content: center;
+  }
+  
+  .clear-btn {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+  }
+  
+  .clear-btn:hover:not(.disabled) {
+    background-color: #ffcdd2;
+    transform: translateY(-2px);
+  }
+  
+  .process-btn {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+  }
+  
+  .process-btn:hover:not(.disabled) {
+    background-color: #c8e6c9;
+    transform: translateY(-2px);
+  }
+  
+  .btn-icon {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+  
+  .disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none !important;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .action-buttons {
+      flex-direction: column;
+      gap: 12px;
+      padding: 15px;
+      width: 100%;
+    }
+    .filter-container{
+      display: inline;
+      margin: 10px;
+    }
+    .filter-btn{
+     margin-top:10px;
+     margin-left: 40%;
+    }
+    .filter-group{
+      margin: 10px;
+    }
+    
+    .action-btn {
+      width: 100%;
+    }
+  }
+
+  /* Dialog Styles */
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .dialog-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 700px;
+    max-width: 90%;
+    overflow: hidden;
+  }
+  
+  .dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .dialog-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 4px;
+  }
+  
+  .close-btn:hover {
+    color: #495057;
+  }
+  
+  .dialog-body {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #495057;
+  }
+  
+  .dropdown-select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .dropdown-select:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .dialog-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 20px;
+    border-top: 1px solid #e9ecef;
+    gap: 12px;
+  }
+  
+  .dialog-btn {
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .cancel-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    color: #495057;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #e9ecef;
+  }
+  
+  .confirm-btn {
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    color: white;
+    display: flex;
+    align-items: center;
+  }
+  
+  .confirm-btn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+  }
+  
+  .btn-icon {
+    margin-right: 8px;
+  }
+
+  /* Stock Dialog Enhancements */
+.stock-item.clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.stock-item.clickable:hover {
+  background: #e6f7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.stock-click-text {
+  font-size: 12px;
+  color: #1890ff;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/* Stock Detail Dialog */
+.stock-detail-dialog {
+  max-width: 800px;
+}
+
+.stock-detail-table {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.stock-detail-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-detail-table th,
+.stock-detail-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.stock-detail-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.stock-detail-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Change Model Button */
+.change-model-btn {
+  background-color: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 10px;
+}
+
+.change-model-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Form Control */
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Selected Rows Info */
+.selected-rows-info {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  border-left: 4px solid #ffc107;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.reject-btn:hover {
+  background-color: #c82333;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Style for disabled selectable rows */
+.disabled-row {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Style for disabled checkboxes */
+.disabled-row .react-data-table--selector {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Selected Requests Summary Styles */
+.selected-requests-summary {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+}
+
+.selected-requests-summary h4 {
+  margin-bottom: 10px;
+  color: #495057;
+}
+
+.requests-list {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.request-item {
+  display: grid;
+  grid-template-columns: 30% 40% 15% 15%; /* Adjusted column widths */
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.available-stock {
+  text-align: right;
+  font-size: 0.9em;
+  color: #28a745; /* Green for sufficient stock */
+}
+
+.low-stock {
+  color: #dc3545; /* Red for insufficient stock */
+  font-weight: bold;
+}
+
+.request-item:last-child {
+  border-bottom: none;
+}
+
+.dealer-name {
+  font-weight: 600;
+  width: 30%;
+}
+
+.model-name {
+  width: 50%;
+  color: #6c757d;
+}
+
+.qty {
+  width: 20%;
+  text-align: right;
+}
+
+.request-item .icon {
+  margin-right: 5px;
+  color: #adb5bd;
+  font-size: 0.8em;
+}
